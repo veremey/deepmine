@@ -1,0 +1,186 @@
+
+.calculator
+	display: flex
+	justify-content: space-between
+	margin: 120px 0 0
+	padding-bottom: 120px
+	+r(768)
+		display: block
+		margin: 80px 0 0
+		padding-bottom: 80px
+	&__type,
+	&__result
+		position: relative
+		width: 50%
+		+r(768)
+			width: 100%
+	&__type
+		+r(768)
+			width: 100%
+			margin: 0 0 40px
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			right: 0
+			height: 50%
+			width: 2px
+			background-color: #fff
+			opacity: .2
+			+r(768)
+				content: none
+		&:before
+			top: 0px
+			transform-origin: 100% 100%
+			+rotate(-20)
+		&:after
+			bottom: 0px
+			transform-origin: 0% 0%
+			+rotate(20)
+	&__row
+		display: inline-block
+		vertical-align: top
+		width: 80%
+		margin-bottom: 40px
+		+r(992)
+			margin-bottom: 30px
+		+r(768)
+			width: 100%
+		&_desc
+			font-size: 13px
+			line-height: 1.2
+			opacity: .85
+			letter-spacing: .016em
+			color: #fff
+			+br
+			+r(992)
+				font-size: 11px
+
+	&__field
+		border-bottom: 2px solid #fff
+		margin-bottom: 8px
+		padding: 17px 0
+		&.no-border
+			border: none
+			padding-bottom: 5px
+		&.is-active
+			border-color: $red
+			svg
+				fill: $red
+				opacity: 1
+		&_icon
+			display: inline-block
+			vertical-align: top
+			width: 24px
+			margin-right: 10px
+			svg
+				fill: #fff
+				opacity: .2
+				display: inline-block
+				vertical-align: top
+				height: 20px
+	&__input
+		display: inline-block
+		width: calc( 100% - 60px)
+		background-color: $n
+		border: none
+		outline: none
+		margin: 0
+		padding: 2px 10px
+		border-left: 1px solid rgba(255, 255, 255, .4)
+
+		font-size: 16px
+		line-height: 1.5
+		letter-spacing: 0.01em
+		color: #fff
+		+br
+		+placeholder
+			opacity: .7
+	#cpu
+		user-select: none
+		pointer-events: none
+	#slider
+		margin-top: 17px
+	#custom-handle
+		width: 14px
+		height: 14px
+		display: inline-block
+		vertical-align: top
+		border-radius: 100%
+		background-color: $red
+		transform: translate(-50%, -50%)
+		outline: none
+		border: none
+	.ui-slider-horizontal .ui-slider-range
+		height: 4px
+		+try(-50%)
+		+gh(#f0d6a6, #df3441)
+
+	&__result
+		width: 46%
+		+r(768)
+			width: 100%
+	&__top
+		padding-bottom: 30px
+		border-bottom: 2px solid rgba(255, 255, 255, .2)
+		margin-bottom: 30px
+	&__bottom
+		display: flex
+		justify-content: space-between
+	&__title
+		font-size: 100px
+		line-height: .8
+		margin-bottom: 20px
+		color: $red
+		text-align: center
+		opacity: .8
+		+bul
+		+r(992)
+			font-size: 68px
+		sub
+			display: inline-block
+			bottom: -.05em
+			font-size: 36px
+			letter-spacing: -1.8px
+			text-indent: -.6em
+			+bul
+			+r(992)
+				font-size: 32px
+				text-indent: 0
+	&__money
+		display: inline-block
+		font-size: 100px
+		line-height: .8
+		letter-spacing: -5.5px
+		text-indent: -.2em
+		+bb
+		+r(992)
+			font-size: 68px
+	&__desc
+		font-size: 16px
+		line-height: 1.5
+		letter-spacing: 0.016em
+		color: #fff
+		text-align: center
+		+br
+		+r(992)
+			font-size: 14px
+
+	&__box
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-wrap: wrap
+		width: 50%
+		padding: 30px 0
+		&.mod-border
+			border-right: 2px solid rgba(255, 255, 255, .2)
+	&__ex
+		width: 100%
+		font-size: 16px
+		line-height: 1.5
+		letter-spacing: 0.016em
+		color: $red
+		text-align: center
+		text-transform: uppercase
+		+br

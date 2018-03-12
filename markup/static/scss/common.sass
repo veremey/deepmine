@@ -1,0 +1,300 @@
+
+html
+	+selection
+		background: rgba(356, 52, 0, .7)
+		color: $blue
+
+html, body
+	height: 100%
+	+box
+
+body
+	color: #fff
+	font-size: 0px
+	line-height: 1.4
+	+br
+
+.page__wrapper
+	overflow: hidden
+
+.page-block
+	height: 100%
+	position: relative
+
+.page__aside
+	position: fixed
+	left: 0
+	top: 0
+	bottom: 0
+	width: 480px
+	background-color: #fff
+	color: #000
+	z-index: 200
+	+r(992)
+		width: 380px
+		max-width: 100%
+	+r(650)
+		width: 100%
+	.header__logo_icon
+		margin: 24px 0 0 24px
+		.clip_10
+			fill: $blue
+	.menu__icon
+		top: 28px
+		right: 24px
+		display: inline-block
+		vertical-align: top
+		&:before,
+		&:after
+			border-color: $red
+
+.page__footer
+	padding: 35px 0 90px
+	background-color: rgb(0, 33, 77)
+	+r(768)
+		padding: 35px 0
+
+a
+	text-decoration: none
+	outline: none
+
+h1, h2, h3, h4, h5, h6
+	margin: 0 0 .8em
+	font-weight: normal
+	line-height: 1.1
+
+h1
+	font-size: 2em
+h2
+	font-size: 1.8em
+h3
+	font-size: 1.6em
+h4
+	font-size: 1.5em
+h5
+	font-size: 1.4em
+h6
+	font-size: 1.3em
+
+b, strong
+	font-weight: normal
+
+p
+	margin: 0
+
+button
+	cursor: pointer
+	+tr(.4)
+	&:hover
+		background-color: darken(#df3441, 5%)
+
+.wrap
+	margin: 0 auto
+	height: 100%
+	width: 100%
+	+box
+	&_wider
+		max-width: 1320px
+		padding: 0 30px
+		+r(992)
+			width: 100%
+			padding: 0 24px
+	&_normal
+		max-width: 1320px
+		padding: 0 90px
+		+r(992)
+			width: 100%
+			padding: 0 24px
+
+/*- title -*/
+.title
+	&__main
+		font-size: 100px
+		color: #fff
+		letter-spacing: -5px
+		line-height: .88
+		margin-bottom: .35em
+		+bb
+		+r(992)
+			font-size: 68px
+	&__s
+		margin-bottom: 4px
+		font-size: 20px
+		line-height: 1.2
+		color: #fff
+		letter-spacing: -.5px
+		opacity: .85
+		+bsb
+		+r(992)
+			font-size: 17px
+		&.mod_blue
+			color: #00214d
+	&__m
+		font-size: 36px
+		color: #fff
+		line-height: 1.11
+		letter-spacing: -1.4px
+		margin-bottom: .8em
+		+bb
+		+r(992)
+			font-size: 32px
+		&.mod_blue
+			color: #00214d
+	&__sm
+		font-size: 16px
+		line-height: 1.5
+		letter-spacing: -.4px
+		margin: 0
+		padding: 16px 30px 20px 0
+		color: $blue
+		+bb
+
+/*- desc -*/
+
+.desc
+	&__m
+		font-size: 20px
+		line-height: 1.4
+		opacity: .85
+		+br
+		+r(992)
+			font-size: 17px
+		&.mod_blue
+			color: #00214d
+
+.mac-pic
+	position: absolute
+	top: 0
+	left: 0
+	width: calc(50vw - 25px)
+	height: 580px
+	padding-top: 90px
+	background: url('../img/content/mac-pic.svg') 0 0 no-repeat
+	background-size: cover
+	+r(992)
+		background: url('../img/content/macbook.svg') 0 0 no-repeat
+		width: 100%
+		height: 200px
+		background-size: cover
+	+r(768)
+		background-size: contain
+	+r(650)
+		padding-top: 60px
+		background-size: cover
+	.mac-code
+		display: block
+		font-size: 13px
+		line-height: 1.23
+		letter-spacing: -.2px
+		color: #fff
+		opacity: .85
+		+br
+		+r(650)
+			margin-left: -50px
+
+.box
+	height: 160px
+	width: 100%
+	+r(544)
+		height: auto
+	&__title
+		font-size: 36px
+		color: #fff
+		line-height: 1.11
+		letter-spacing: -1.4px
+		margin: 0 10px 0 0
+		+bb
+		+r(992)
+			font-size: 32px
+			width: calc(100% - 350px)
+		+r(544)
+			width: 100%
+			margin-top: 20px
+			margin-bottom: 20px
+			text-align: center
+		span
+			color: $red
+	&__link
+		display: inline-block
+		vertical-align: top
+		width: 246px
+		max-width: 100%
+		color: #fff
+		text-align: center
+		background-color: $red
+		padding: 22px 40px 18px
+		margin: 0
+		border: none
+		outline: none
+		border-radius: 60px
+		font-size: 16px
+		+bb
+		+tr(.4s)
+		+r(544)
+			margin: 0 auto 30px
+		&:hover
+			color: $blue
+
+	.wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap
+
+.accordion
+	margin-top: 60px
+	margin-bottom: 122px
+	&__section
+		margin-bottom: 45px
+		border-bottom: 1px solid rgba(0, 33, 77, .2)
+	&__item
+		border-top: 1px solid rgba(0, 33, 77, .2)
+		&.is-active
+			.accordion__text
+				height: auto
+				padding-bottom: 30px
+			.accordion__title svg
+				+rotate(180)
+	&__title
+		position: relative
+		font-size: 16px
+		line-height: 1.5
+		letter-spacing: -.4px
+		margin: 0
+		cursor: pointer
+		padding: 16px 30px 20px 0
+		color: $blue
+		+bb
+		svg
+			position: absolute
+			top: 24px
+			right: 0
+			display: inline-block
+			vertical-align: top
+			width: 19px
+			height: 14px
+			+tr(.4s)
+
+	&__text
+		height: 0
+		font-size: 16px
+		opacity: .85
+		padding-bottom: 0px
+		line-height: 1.5
+		letter-spacing: -.2px
+		color: $blue
+		overflow: hidden
+		+br
+		+tr(.4s)
+	.title__s
+		opacity: 1
+		color: $blue
+		margin-bottom: 30px
+
+.is-center
+	text-align: center
+
+.mt-40
+	margin-top: 40px
+	+r(768)
+		margin-top: 20px

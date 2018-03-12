@@ -1,0 +1,72 @@
+.footer
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+r(768)
+			flex-direction: column
+			align-items: flex-start
+	&__logo
+		display: inline-block
+		vertical-align: top
+		opacity: .4
+		+r(768)
+			margin-bottom: 40px
+		#red
+			fill: #fff
+	&__nav,
+	&__soc
+		display: flex
+		align-items: center
+
+	&__link
+		display: inline-block
+		vertical-align: top
+		margin-left: 40px
+		font-size: 16px
+		line-height: 1.5
+		letter-spacing: -.2px
+		color: #fff
+		+br
+		+tr(.4s)
+		+r(992)
+			font-size: 14px
+			margin-left: 26px
+		+r(768)
+			display: block
+			margin: 20px 0
+		&:hover
+			color: $red
+	&__nav
+		+r(768)
+			display: block
+	&__soc
+		margin-left: 40px
+		+r(992)
+			margin-left: 26px
+		+r(768)
+			margin: 0
+		&_desc
+			font-size: 16px
+			line-height: 1.5
+			letter-spacing: -.2px
+			color: #fff
+			opacity: .3
+			+br
+			+r(992)
+				font-size: 14px
+	.soc__link
+		display: inline-block
+		vertical-align
+		color: #fff
+		width: 16px
+		margin-left: 40px
+		+r(992)
+			font-size: 14px
+			margin-left: 26px
+		&:hover
+			svg
+				fill: $red
+		svg
+			fill: #fff
+			+tr(.4s)

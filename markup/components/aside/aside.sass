@@ -1,0 +1,187 @@
+.aside
+	width: 300px
+	margin: 80px auto 40px
+	+box
+	+r(992)
+		margin: 40px 0px 0
+		padding: 0 24px
+		width: 100%
+	&__desc
+		font-size: 16px
+		line-height: 1.5
+		letter-spacing: -.4px
+		text-align: center
+		color: #00214d
+		+bb
+		+r(650)
+			font-size: 14px
+	&__link
+		font-size: 16px
+		line-height: 1.5
+		letter-spacing: -.4px
+		text-align: center
+		color: $red
+		+bb
+	.title__m
+		color: $blue
+	.soc__link
+		display: inline-block
+		vertical-align: top
+		margin-right: 30px
+		&:hover
+			svg
+				fill: $blue
+	&__soc
+		margin-bottom: 30px
+		svg
+			width: 20px
+			fill: $red
+			+tr(.4s)
+	&__form
+		margin-top: 40px
+	&__fieldset
+		padding: 0px
+		border: none
+		margin: 0 0 5px
+		&.mod-float
+			+clr
+			.check
+				float: left
+			.aside__desc
+				float: right
+				+br
+		&.mt-40
+			margin-top: 40px
+	&__input
+		width: 100%
+		background: none
+		margin: 0 0 10px
+		outline: none
+		border: none
+		background-color: $n
+		border-bottom: 1px solid $blue
+		padding: 16px 0 18px
+		font-size: 16px
+		line-height: 1.5
+		color:  #00214d
+		+br
+		+placeholder
+			opacity: .3
+	&__label
+		font-size: 13px
+		opacity: .85
+		letter-spacing: -.016em
+		+br
+	&__btn
+		width: 100%
+		border: none
+		padding: 0
+		margin: 30px 0 20px
+		display: inline-block
+		vertical-align: top
+		outline: none
+		background-color: $red
+		font-size: 17px
+		color: #fff
+		text-align: center
+		padding: 18px 20px 16px
+		border-radius: 60px
+		+bb
+		+tr(.4s)
+		&:hover
+			background-color: darken(#df3441, 5%)
+
+.mod-aside
+	.startscreen__text
+		position: absolute
+		top: 120px
+		left: 50%
+		+trx(-50%)
+		+r(1300)
+			+trx(0)
+		+r(992)
+			left: 60%
+		+r(800)
+			display: none
+	.startscreen__pic
+		bottom: auto
+		right: auto
+		left: 40%
+		top: 80px
+		+r(1300)
+			left: 60%
+		+r(992)
+			left: 60%
+		+r(800)
+			top: 30px
+	.startscreen__img
+		max-width: 120%
+		+r(992)
+			max-width: 150%
+
+
+.check
+	position: relative
+	display: inline-block
+	input
+		position: absolute
+		top: 2px
+		left: 0
+		z-index: 2
+		opacity: 0
+		&:checked
+			~ span
+				user-select: none
+				// &:before
+					// background-color: $blue
+				&:after
+					content: ""
+					position: absolute
+					top: 6px
+					left: 4px
+					display: inline-block
+					vertical-align: top
+					width: 11px
+					height: 7px
+					background-image: url('../img/content/icon-bird.png')
+					// +s(icon-selector-checked)
+		&:disabled
+			~ span
+				opacity: 1
+	span
+		position: relative
+		padding-left: 28px
+		left: 0
+		top: 0
+		font-size: 16px
+		line-height: 1.5
+		letter-spacing: -.4px
+		text-align: center
+		color: #00214d
+		+br
+		color: $blue
+		cursor: pointer
+		user-select: none
+		z-index: 15
+		+r(650)
+			font-size: 14px
+		&:before
+			content: ""
+			position: absolute
+			top: -1px
+			left: 0
+			width: 18px
+			height: 18px
+			background-color: #fff
+			border: 1px solid $blue
+			cursor: pointer
+			+tr(.4s)
+
+
+/*-- validate -*/
+
+.has-error
+	font-size: 14px
+	color: $red
+	+ .aside__label
+		font-size: 0

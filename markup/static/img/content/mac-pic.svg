@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="639px" height="489px" viewBox="0 0 639 489" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>74E174A7-CECC-4F41-A441-AC1809278040</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="landing_Extra-large-≥1200px-red-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-681.000000, -3059.000000)">
+        <g id="adv-s" transform="translate(0.000000, 2340.000000)" stroke="#FFFFFF">
+            <g id="Group-4" transform="translate(628.000000, 685.000000)">
+                <g id="Macbook__ipad__iphone" transform="translate(54.000000, 35.000000)">
+                    <path d="M791.042125,0 L37.9578755,0 C17.4606227,0 0,16.8871795 0,37.7299145 L0,534 L829,534 L829,37.7299145 C829,16.8871795 811.539377,0 791.042125,0 Z" id="bezel_1_" stroke-width="2"></path>
+                    <circle id="webcam" stroke-width="2" cx="416.5" cy="28.5" r="6.5"></circle>
+                    <rect id="screen_1_" x="33" y="60" width="761" height="444"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

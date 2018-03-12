@@ -1,0 +1,76 @@
+
+.startscreen
+	background-color: $blue
+	&__wrap
+		position: relative
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+		height: 100vh
+		min-height: 100vh
+		width: 100%
+		+box
+	&__text
+		position: relative
+		max-width: 475px
+		margin-bottom: 10%
+		z-index: 10
+	&__pic
+		position: absolute
+		bottom: 4vh
+		right: 0px
+		// top: 80px
+		z-index: 1
+		max-width: 64%
+	&__img
+		max-width: 100%
+		max-height: 100%
+
+.cross-link
+	position: relative
+	display: inline-flex
+	align-items: center
+	vertical-align: top
+	margin-top: 35px
+	padding-right: 57px
+	padding-bottom: 20px
+	border-bottom: 1px solid #fff
+	font-size: 16px
+	+tr(.4s)
+	+r(992)
+		font-size: 14px
+	&:hover
+		border-color: $red
+		span
+			color: $red
+		svg
+			fill: $red
+	&.mod_red
+		border-bottom: 1px solid $red
+		margin-bottom: 120px
+		span
+			color: $red
+		svg
+			fill: $red
+		&:hover
+			border-color: $blue
+			span
+				color: $blue
+			svg
+				fill: $blue
+	span
+		display: inline-block
+		color: #fff
+		line-height: 1.25
+		letter-spacing: -.4px
+		+bb
+		+tr(.4s)
+	svg
+		position: absolute
+		top: .2em
+		right: 0
+		display: inline-block
+		vertical-align: top
+		width: 16px
+		fill: #fff
+		+tr(.4s)
