@@ -1553,6 +1553,12 @@ button:hover {
   user-select: none;
 }
 
+@media only screen and (max-width: 544px) {
+  .select__text {
+    padding: 0 20px 0 0;
+  }
+}
+
 .select__text p {
   display: none !important;
 }
@@ -2169,7 +2175,7 @@ button:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100vh;
-  min-height: 100vh;
+  min-height: 600px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -2181,12 +2187,25 @@ button:hover {
   z-index: 10;
 }
 
+@media only screen and (max-width: 700px) {
+  .startscreen__text {
+    width: 90%;
+  }
+}
+
 .startscreen__pic {
   position: absolute;
   bottom: 4vh;
   right: 0px;
   z-index: 1;
   max-width: 64%;
+}
+
+@media only screen and (max-width: 700px) {
+  .startscreen__pic {
+    bottom: auto;
+    top: 60px;
+  }
 }
 
 .startscreen__img {
