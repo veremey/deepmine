@@ -512,13 +512,15 @@ body {
 
 .page__aside {
   position: fixed;
-  left: 0;
+  left: -100%;
   top: 0;
   bottom: 0;
   width: 480px;
   background-color: #fff;
   color: #000;
   z-index: 200;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 @media only screen and (max-width: 992px) {
@@ -532,6 +534,10 @@ body {
   .page__aside {
     width: 100%;
   }
+}
+
+.page__aside.is-open {
+  left: 0;
 }
 
 .page__aside .header__logo_icon {
@@ -618,14 +624,16 @@ button:hover {
 }
 
 .wrap {
-  margin: 0 auto;
+  position: relative;
   height: 100%;
+  margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
 }
 
 .wrap_wider {
   max-width: 1320px;
+  height: 100%;
   padding: 0 30px;
 }
 
@@ -861,6 +869,7 @@ button:hover {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  height: 160px;
 }
 
 .accordion {
@@ -945,18 +954,28 @@ button:hover {
   }
 }
 
+.kolbasa {
+  z-index: 20;
+}
+
 .aside {
+  display: none;
   width: 300px;
   margin: 80px auto 40px;
+  max-height: calc(100vh - 120px);
   box-sizing: border-box;
 }
 
 @media only screen and (max-width: 992px) {
   .aside {
     margin: 40px 0px 0;
-    padding: 0 24px;
+    padding: 0 0 0 24px;
     width: 100%;
   }
+}
+
+.aside.is-open {
+  display: block;
 }
 
 .aside__desc {
@@ -974,6 +993,15 @@ button:hover {
   }
 }
 
+.aside__desc.mod_link {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.aside__desc.mod_link:hover {
+  color: #df3441;
+}
+
 .aside__link {
   font-size: 16px;
   line-height: 1.5;
@@ -981,6 +1009,15 @@ button:hover {
   text-align: center;
   color: #df3441;
   font-family: 'Bond4FBold', Arial, sans-serif;
+}
+
+.aside .mCSB_scrollTools {
+  width: 3px;
+}
+
+.aside .mCSB_container {
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 
 .aside .title__m {
@@ -1049,11 +1086,12 @@ button:hover {
   border: none;
   background-color: transparent;
   border-bottom: 1px solid #00214d;
-  padding: 16px 0 18px;
+  padding: 16px 14px 18px;
   font-size: 16px;
   line-height: 1.5;
   color: #00214d;
   font-family: 'Bond4F', Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 .aside__input::-webkit-input-placeholder {
@@ -1096,6 +1134,18 @@ button:hover {
 
 .aside__btn:hover {
   background-color: #d82230;
+}
+
+.login,
+.register,
+.forgot {
+  display: none;
+}
+
+.login.is-open,
+.register.is-open,
+.forgot.is-open {
+  display: block;
 }
 
 .mod-aside .startscreen__text {
@@ -1280,6 +1330,16 @@ button:hover {
   .footer__logo {
     margin-bottom: 40px;
   }
+}
+
+.footer__logo_icon {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  z-index: 100;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .footer__logo #red {
@@ -1545,7 +1605,6 @@ button:hover {
   padding: 0 0 0 10px;
   vertical-align: middle;
   letter-spacing: -.025em;
-  line-height: 36px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1566,6 +1625,7 @@ button:hover {
 .select__text span {
   font-size: 15px;
   margin: 0 5px;
+  line-height: 1.3;
   text-transform: uppercase;
   color: #fff;
   box-sizing: border-box;
@@ -1798,26 +1858,28 @@ button:hover {
   fill: #fff;
 }
 
-.screen {
-  padding-top: 1px;
+@media only screen and (max-width: 700px) {
+  .screen {
+    height: auto !important;
+  }
 }
 
 .screen__title {
   width: 50%;
   max-width: 555px;
-  margin-top: 120px;
+  padding-top: 120px;
 }
 
 @media only screen and (max-width: 992px) {
   .screen__title {
-    margin-top: 80px;
+    padding-top: 80px;
     width: 100%;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .screen__title {
-    margin-top: 60px;
+    padding-top: 60px;
   }
 }
 
@@ -1839,6 +1901,10 @@ button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.screen-last {
+  position: relative;
 }
 
 .calculator {
@@ -2210,7 +2276,7 @@ button:hover {
 
 .startscreen__img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 90vh;
 }
 
 .cross-link {
@@ -2337,6 +2403,7 @@ button:hover {
   width: calc(100% + 50px);
   margin-left: -50px;
   margin-top: 140px;
+  padding-bottom: 60px;
 }
 
 @media only screen and (max-width: 992px) {

@@ -1,11 +1,15 @@
 .aside
+	display: none
 	width: 300px
 	margin: 80px auto 40px
+	max-height: calc(100vh - 120px)
 	+box
 	+r(992)
 		margin: 40px 0px 0
-		padding: 0 24px
+		padding: 0 0 0 24px
 		width: 100%
+	&.is-open
+		display: block
 	&__desc
 		font-size: 16px
 		line-height: 1.5
@@ -15,6 +19,10 @@
 		+bb
 		+r(650)
 			font-size: 14px
+		&.mod_link
+			+tr(.4s)
+			&:hover
+				color: $red
 	&__link
 		font-size: 16px
 		line-height: 1.5
@@ -22,6 +30,11 @@
 		text-align: center
 		color: $red
 		+bb
+	.mCSB_scrollTools
+		width: 3px
+	.mCSB_container
+		padding-right: 20px
+		+box
 	.title__m
 		color: $blue
 	.soc__link
@@ -60,11 +73,12 @@
 		border: none
 		background-color: $n
 		border-bottom: 1px solid $blue
-		padding: 16px 0 18px
+		padding: 16px 14px 18px
 		font-size: 16px
 		line-height: 1.5
 		color:  #00214d
 		+br
+		+box
 		+placeholder
 			opacity: .3
 	&__label
@@ -90,6 +104,13 @@
 		+tr(.4s)
 		&:hover
 			background-color: darken(#df3441, 5%)
+
+.login,
+.register,
+.forgot
+	display: none
+	&.is-open
+		display: block
 
 .mod-aside
 	.startscreen__text

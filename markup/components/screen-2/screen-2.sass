@@ -1,16 +1,20 @@
 
 .screen
-	padding-top: 1px
+	// padding-top: 1px
+	// min-height: 100vh
+	+r(700)
+		height: auto !important
+
 	&__wrap
 	&__title
 		width: 50%
 		max-width: 555px
-		margin-top: 120px
+		padding-top: 120px
 		+r(992)
-			margin-top: 80px
+			padding-top: 80px
 			width: 100%
 		+r(768)
-			margin-top: 60px
+			padding-top: 60px
 		+r(544)
 			font-size: 29px
 		&.mod_wide
@@ -19,3 +23,5 @@
 	&__text
 		display: flex
 		justify-content: space-between
+	&-last
+		position: relative

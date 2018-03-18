@@ -23,18 +23,21 @@ body
 
 .page__aside
 	position: fixed
-	left: 0
+	left: -100%
 	top: 0
 	bottom: 0
 	width: 480px
 	background-color: #fff
 	color: #000
 	z-index: 200
+	+tr(.2s)
 	+r(992)
 		width: 380px
 		max-width: 100%
 	+r(650)
 		width: 100%
+	&.is-open
+		left: 0
 	.header__logo_icon
 		margin: 24px 0 0 24px
 		.clip_10
@@ -49,6 +52,7 @@ body
 			border-color: $red
 
 .page__footer
+	pointer
 	padding: 35px 0 90px
 	background-color: rgb(0, 33, 77)
 	+r(768)
@@ -89,12 +93,19 @@ button
 		background-color: darken(#df3441, 5%)
 
 .wrap
-	margin: 0 auto
+	position: relative
 	height: 100%
+	// overflow: auto
+	margin: 0 auto
+	// min-height: 100%
+	// height: auto
 	width: 100%
+	// overflow-x: hidden
+	// overflow: auto
 	+box
 	&_wider
 		max-width: 1320px
+		height: 100%
 		padding: 0 30px
 		+r(992)
 			width: 100%
@@ -240,6 +251,7 @@ button
 		align-items: center
 		justify-content: space-between
 		flex-wrap: wrap
+		height: 160px
 
 .accordion
 	margin-top: 60px
