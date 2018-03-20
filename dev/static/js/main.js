@@ -1,9 +1,10 @@
 $(document).ready(function () {
-	if($(document).width() >=700 ){
-		$('.screen').mCustomScrollbar({
-				scrollInertia: 5
-			});
-	 }
+	// if($(document).width() >=700 ){
+		// $('.screen').mCustomScrollbar({
+		// 		scrollInertia: 5,
+		// 		// mouseWheelPixels: 5
+		// 	});
+	 // }
 
 	$('.aside').mCustomScrollbar({
 				scrollInertia: 5
@@ -32,7 +33,6 @@ $(document).ready(function () {
 				$('.header').removeClass('is-scroll');
 			}
 		}
-
 
 	});
 

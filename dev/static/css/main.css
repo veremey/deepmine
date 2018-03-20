@@ -1534,7 +1534,7 @@ button:hover {
 .select {
   position: relative;
   display: inline-block;
-  width: 86px;
+  width: 76px;
   cursor: pointer;
   font-size: 0;
   white-space: nowrap;
@@ -1546,7 +1546,7 @@ button:hover {
   content: "";
   position: absolute;
   top: 50%;
-  right: 8px;
+  right: 0px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-transform-origin: 50% 50%;
@@ -1856,55 +1856,6 @@ button:hover {
 .menu.is-active .soc__link svg {
   width: 20px;
   fill: #fff;
-}
-
-@media only screen and (max-width: 700px) {
-  .screen {
-    height: auto !important;
-  }
-}
-
-.screen__title {
-  width: 50%;
-  max-width: 555px;
-  padding-top: 120px;
-}
-
-@media only screen and (max-width: 992px) {
-  .screen__title {
-    padding-top: 80px;
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .screen__title {
-    padding-top: 60px;
-  }
-}
-
-@media only screen and (max-width: 544px) {
-  .screen__title {
-    font-size: 29px;
-  }
-}
-
-.screen__title.mod_wide {
-  width: 100%;
-  max-width: 750px;
-}
-
-.screen__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.screen-last {
-  position: relative;
 }
 
 .calculator {
@@ -2225,6 +2176,55 @@ button:hover {
   font-family: 'Bond4F', Arial, sans-serif;
 }
 
+@media only screen and (max-width: 700px) {
+  .screen {
+    height: auto !important;
+  }
+}
+
+.screen__title {
+  width: 50%;
+  max-width: 555px;
+  padding-top: 120px;
+}
+
+@media only screen and (max-width: 992px) {
+  .screen__title {
+    padding-top: 80px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .screen__title {
+    padding-top: 60px;
+  }
+}
+
+@media only screen and (max-width: 544px) {
+  .screen__title {
+    font-size: 29px;
+  }
+}
+
+.screen__title.mod_wide {
+  width: 100%;
+  max-width: 750px;
+}
+
+.screen__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.screen-last {
+  position: relative;
+}
+
 .startscreen {
   background-color: #00214d;
 }
@@ -2360,38 +2360,6 @@ button:hover {
   fill: #fff;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-}
-
-.startscreen__soc {
-  position: absolute;
-  right: 30px;
-  bottom: 10%;
-  width: 30px;
-  z-index: 10;
-}
-
-.startscreen .soc__link {
-  display: block;
-  vertical-align: top;
-  text-align: right;
-  margin-bottom: 40px;
-  fill: #fff;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.startscreen .soc__link:hover {
-  fill: #df3441;
-}
-
-.startscreen .soc__link svg {
-  width: 16px;
-  height: 15px;
-}
-
-.startscreen #soc {
-  display: inline-block;
-  vertical-align: top;
 }
 
 .text {
@@ -2570,6 +2538,38 @@ button:hover {
 
 .text__desc.mod_blue {
   color: #00214d;
+}
+
+.startscreen__soc {
+  position: absolute;
+  right: 30px;
+  bottom: 10%;
+  width: 30px;
+  z-index: 10;
+}
+
+.startscreen .soc__link {
+  display: block;
+  vertical-align: top;
+  text-align: right;
+  margin-bottom: 40px;
+  fill: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.startscreen .soc__link:hover {
+  fill: #df3441;
+}
+
+.startscreen .soc__link svg {
+  width: 16px;
+  height: 15px;
+}
+
+.startscreen #soc {
+  display: inline-block;
+  vertical-align: top;
 }
 
 /*# sourceMappingURL=main.css.map */
