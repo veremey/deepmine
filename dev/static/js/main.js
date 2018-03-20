@@ -1,4 +1,4 @@
-$(document).ready(function () {
+// $(document).ready(function () {
 	// if($(document).width() >=700 ){
 		// $('.screen').mCustomScrollbar({
 		// 		scrollInertia: 5,
@@ -6,10 +6,10 @@ $(document).ready(function () {
 		// 	});
 	 // }
 
-	$('.aside').mCustomScrollbar({
-				scrollInertia: 5,
-				mouseWheelPixels: 5
-			});
+	// $('.aside').mCustomScrollbar({
+	// 			scrollInertia: 5,
+	// 			mouseWheelPixels: 5
+	// 		});
 
 	// $('#full_page').fullpage({
 	// 	sectionSelector: '.screen',
@@ -94,7 +94,7 @@ $(document).ready(function () {
 	// $('.wrap').mCustomScrollbar({
 	// 	scrollInertia: 600
 	// });
-});
+// });
 
 
 

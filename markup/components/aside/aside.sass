@@ -2,7 +2,7 @@
 	display: none
 	width: 300px
 	margin: 80px auto 40px
-	max-height: calc(100vh - 120px)
+	// max-height: calc(100vh - 120px)
 	+box
 	+r(992)
 		margin: 40px 0px 0
@@ -111,6 +111,32 @@
 	display: none
 	&.is-open
 		display: block
+
+.register,
+.login
+	+rh(650)
+		margin-top: 60px
+	.aside__input
+		+rh(650)
+			padding: 10px 14px 10px;
+	.aside__fieldset
+		+rh(650)
+			margin-bottom: 10px
+	.title__m
+		+rh(600)
+			font-size: 30px
+			margin-bottom: .5em
+	.aside__form
+		+rh(600)
+			margin-top: 20px
+
+.login
+	+rh(650)
+		margin-top: 60px
+	.mt-40
+		+rh(650)
+			margin-top: 20px
+
 
 .mod-aside
 	.startscreen__text

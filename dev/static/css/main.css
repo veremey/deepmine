@@ -962,7 +962,6 @@ button:hover {
   display: none;
   width: 300px;
   margin: 80px auto 40px;
-  max-height: calc(100vh - 120px);
   box-sizing: border-box;
 }
 
@@ -1146,6 +1145,54 @@ button:hover {
 .register.is-open,
 .forgot.is-open {
   display: block;
+}
+
+@media only screen and (max-height: 650px) {
+  .register,
+  .login {
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  .register .aside__input,
+  .login .aside__input {
+    padding: 10px 14px 10px;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  .register .aside__fieldset,
+  .login .aside__fieldset {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .register .title__m,
+  .login .title__m {
+    font-size: 30px;
+    margin-bottom: .5em;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .register .aside__form,
+  .login .aside__form {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  .login {
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  .login .mt-40 {
+    margin-top: 20px;
+  }
 }
 
 .mod-aside .startscreen__text {
