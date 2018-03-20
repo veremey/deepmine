@@ -7,34 +7,35 @@ $(document).ready(function () {
 	 // }
 
 	$('.aside').mCustomScrollbar({
-				scrollInertia: 5
+				scrollInertia: 5,
+				mouseWheelPixels: 5
 			});
 
-	$('#full_page').fullpage({
-		sectionSelector: '.screen',
-		sectionsColor: ['#00214d', '#df3441', '#00214d', '#78b2df', '#ffffff', '#ffffff'],
-	  fitToSection: false,
-	  verticalCentered: false,
-	  lockAnchors: true,
-	  scrollingSpeed: 1200,
-	  responsiveWidth: 700,
-	  afterLoad: function(anchorLink, index) {
-			if(index == 4) {
-				$('.screen-4').mCustomScrollbar('scrollTo', 0, {
-					scrollInertia: 0
-				});
-			} else if(index > 1) {
-				$('.header').addClass('is-scroll');
-			}
-			else {
-				$('.screen-4').mCustomScrollbar('scrollTo', 0, {
-					scrollInertia: 5
-				});
-				$('.header').removeClass('is-scroll');
-			}
-		}
+	// $('#full_page').fullpage({
+	// 	sectionSelector: '.screen',
+	// 	sectionsColor: ['#00214d', '#df3441', '#00214d', '#78b2df', '#ffffff', '#ffffff'],
+	//   fitToSection: false,
+	//   verticalCentered: false,
+	//   lockAnchors: true,
+	//   scrollingSpeed: 1200,
+	//   responsiveWidth: 700,
+	//   afterLoad: function(anchorLink, index) {
+	// 		if(index == 4) {
+	// 			$('.screen-4').mCustomScrollbar('scrollTo', 0, {
+	// 				scrollInertia: 0
+	// 			});
+	// 		} else if(index > 1) {
+	// 			$('.header').addClass('is-scroll');
+	// 		}
+	// 		else {
+	// 			$('.screen-4').mCustomScrollbar('scrollTo', 0, {
+	// 				scrollInertia: 5
+	// 			});
+	// 			$('.header').removeClass('is-scroll');
+	// 		}
+	// 	}
 
-	});
+	// });
 
 
 	// function toNextSlide() {
