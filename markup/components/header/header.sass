@@ -11,6 +11,33 @@
 	&.is-scroll
 		height: 60px
 		background-color: $blue
+		&.mod-white
+			color: #fff
+			.clip_10
+				fill: #fff
+			.select__text span,
+			.enter__link
+				color: #fff
+			.select:after
+				border-color: #fff $n $n $n
+
+	&.mod-white
+		color: #00214d
+		+r(650)
+			background-color: #00214d
+		.clip_10
+			fill: #00214d
+			+r(650)
+				fill: #fff
+		.select__text span,
+		.enter__link
+			color: #00214d
+			+r(650)
+				color: #fff
+		.select:after
+			border-color: #00214d $n $n $n
+			+r(650)
+				border-color: #fff $n $n $n
 	&__wrap
 		display: flex
 		align-items: center
@@ -63,7 +90,7 @@
 		top: 50%
 		right: 0px
 		transform: translateY(-50%)
-		transform-origin: 50% 50%
+		transform-origin: 90% 50%
 		+arr(10, 5, #fff, b)
 		+tr(.4s 0s)
 	&.is-active

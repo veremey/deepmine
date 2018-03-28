@@ -24,14 +24,14 @@ _template: {
 },
 
 __pages: [{
-                name: 'forgot',
-                href: 'forgot.html'
-             },{
                 name: 'index',
                 href: 'index.html'
              },{
                 name: 'login',
                 href: 'login.html'
+             },{
+                name: 'privacy',
+                href: 'privacy.html'
              },{
                 name: 'register',
                 href: 'register.html'

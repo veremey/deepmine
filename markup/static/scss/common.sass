@@ -21,6 +21,32 @@ body
 	height: 100%
 	position: relative
 
+.page-login
+	background-color: #f1f1f1
+	.page__aside
+		position: static
+		background-color: #f1f1f1
+		margin: 0 auto
+		+r(650)
+			margin: 0
+	.login
+		display: block
+		+r(650)
+			margin-top: 40px
+	.check span:before
+		background-color: #f1f1f1
+	.cross-link
+		border-bottom: 1px solid #e21b46
+		margin-top: 20px
+		+r(768)
+			margin-top: 0px
+		svg
+			fill: #e21b46
+			width: 14px
+		span
+			color: #e21b46
+			font-size: 16px
+
 .page__aside
 	position: fixed
 	left: -100%
@@ -32,8 +58,8 @@ body
 	z-index: 200
 	+tr(.2s)
 	+r(992)
-		width: 380px
-		max-width: 100%
+		width: 100%
+		max-width: 380px
 	+r(650)
 		width: 100%
 	&.is-open
@@ -172,6 +198,11 @@ button
 			font-size: 17px
 		&.mod_blue
 			color: #00214d
+	&__link
+		color: inherit
+		+tr(.4s)
+		&:hover
+			color: #ff1010
 
 .mac-pic
 	position: absolute
@@ -303,6 +334,22 @@ button
 		color: $blue
 		margin-bottom: 30px
 
+.privacy
+	padding-top: 160px
+	color: #00214d
+	&__top
+		margin-bottom: 30px
+		padding-bottom: 30px
+		border-bottom: 1px solid rgba(0, 33, 77, .2)
+	&__bottom
+		margin-bottom: 100px
+	.title__s,
+	.title__m
+		color: #00214d
+	.desc__m
+		+bul
+
+
 .is-center
 	text-align: center
 
@@ -310,3 +357,7 @@ button
 	margin-top: 40px
 	+r(768)
 		margin-top: 20px
+.mb-30
+	margin-bottom: 30px
+	+r(760)
+		margin-bottom: 15px
